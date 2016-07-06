@@ -19,15 +19,7 @@ static int bCoefficients[N][M] = {
 	{6, 7, 8, 3}
 };
 
-static struct matrix_t
-a = (struct matrix_t) {
-	.m = M,
-	.n = N,
-},
-b = (struct matrix_t) {
-	.m = N,
-	.n = M,
-}, c;
+static struct matrix_t a, b, c;
 
 TEST_SETUP(Multiply)
 {

@@ -14,10 +14,7 @@ static int coefficients[M][N] = {
 	{1, 7}
 };
 
-static struct matrix_t matrix = (struct matrix_t) {
-	.m = M,
-	.n = N,
-};
+static struct matrix_t matrix;
 
 TEST_SETUP(Matrix)
 {
