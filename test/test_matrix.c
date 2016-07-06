@@ -7,16 +7,15 @@
 
 TEST_GROUP(Matrix);
 
-static int coefficients[M][N] = {
-	{4, 5},
-	{8, 7},
-	{5, 4},
-	{1, 7}
-};
 static struct matrix_t matrix = (struct matrix_t) {
 	.m = M,
 	.n = N,
-	.coefficients = (void *) coefficients
+	.coefficients = (void *) & (int[M][N]) {
+		{4, 5},
+		{8, 7},
+		{5, 4},
+		{1, 7}
+	}
 };
 
 TEST_SETUP(Matrix)
