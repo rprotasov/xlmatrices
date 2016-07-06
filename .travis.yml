@@ -11,5 +11,8 @@ compiler:
 
 script:
   - >
-    if ["$TRAVIS_OS_NAME" = 'linux']; then sudo apt-get install libpthread-stubs0-dev;
+    if ["$TRAVIS_OS_NAME" = 'linux']
+      then
+        sudo apt-get install libpthread-stubs0-dev
+    fi
   - make && make test

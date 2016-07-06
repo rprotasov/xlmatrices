@@ -42,11 +42,12 @@ SRC_FILES = \
 	test/test_runners/all_tests.c
 
 INC_DIRS = -Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
+SYMBOLS = -pthread
 
 OBJS = src/mdriver.o src/matrix.o src/mul.o
 
 mdriver: $(OBJS)
-	$(CC) $(CFLAGS) -o mdriver $(OBJS)
+	$(CC) $(CFLAGS) $(SYMBOLS) -o mdriver $(OBJS)
 
 mdriver.o: mdriver.c matrix.h mul.h
 
@@ -56,7 +57,7 @@ mul.o: mul.c mul.h
 
 .PHONY : test
 test:
-	$(CC) $(CFLAGS) $(INC_DIRS) $(SRC_FILES) -o $(TARGET)
+	$(CC) $(CFLAGS) $(SYMBOLS) $(INC_DIRS) $(SRC_FILES) -o $(TARGET)
 	./$(TARGET) -v
 
 .PHONY : clean
