@@ -8,24 +8,25 @@
 
 TEST_GROUP(Multiply);
 
+static int aCoefficients[M][N] = {
+	{4, 5},
+	{8, 7},
+	{5, 4},
+	{1, 7}
+};
+static int bCoefficients[N][M] = {
+	{3, 8, 0, 7},
+	{6, 7, 8, 3}
+};
+
 static struct matrix_t
 a = (struct matrix_t) {
 	.m = M,
 	.n = N,
-	.coefficients = (void *) & (int[M][N]) {
-		{4, 5},
-		{8, 7},
-		{5, 4},
-		{1, 7}
-	}
 },
 b = (struct matrix_t) {
 	.m = N,
 	.n = M,
-	.coefficients = (void *) & (int[N][M]) {
-		{3, 8, 0, 7},
-		{6, 7, 8, 3}
-	}
 }, c;
 
 TEST_SETUP(Multiply)
