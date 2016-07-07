@@ -15,4 +15,4 @@ script:
       then
         sudo apt-get install libpthread-stubs0-dev
     fi
-  - make && make test
+  - make test
