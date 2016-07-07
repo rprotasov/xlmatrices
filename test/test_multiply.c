@@ -19,7 +19,7 @@ static int bCoefficients[N][M] = {
 	{6, 7, 8, 3}
 };
 
-static struct matrix_t a, b, c;
+static mmatrix_t a, b, c;
 
 TEST_SETUP(Multiply)
 {
@@ -33,5 +33,5 @@ TEST_TEAR_DOWN(Multiply)
 
 TEST(Multiply, Mul_ReturnsCorrectResult)
 {
-	TEST_ASSERT_EQUAL(0, 0);
+	TEST_ASSERT_EQUAL(1, 1);
 }
