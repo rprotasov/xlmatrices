@@ -5,6 +5,6 @@
 #include <pthread.h>
 #include "matrix.h"
 
-int mul(mmatrix_t *a, mmatrix_t *b, mmatrix_t *c);
+int xlmmul(xlmmatrix_t *a, xlmmatrix_t *b, xlmmatrix_t *c);
 
 #endif /* mul */

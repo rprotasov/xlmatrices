@@ -8,22 +8,15 @@
 
 TEST_GROUP(Multiply);
 
-static int aCoefficients[M][N] = {
-	{4, 5},
-	{8, 7},
-	{5, 4},
-	{1, 7}
-};
-static int bCoefficients[N][M] = {
-	{3, 8, 0, 7},
-	{6, 7, 8, 3}
-};
-
-static mmatrix_t a, b, c;
+static xlmmatrix_t a, b, c;
 
 TEST_SETUP(Multiply)
 {
+	extern xlmmatrix_t a, b, c;
 
+	xlminit(&a, M, N, xlmInt, NULL);
+	xlminit(&b, M, N, xlmInt, NULL);
+	xlminit(&c, M, N, xlmInt, NULL);
 }
 
 TEST_TEAR_DOWN(Multiply)

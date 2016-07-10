@@ -6,30 +6,30 @@
 #include <string.h>
 
 typedef enum {
-	mChar,
-	mInt,
-	mFloat,
-	mDouble,
-	mUnsigned,
-	mLong
-} mTypes_t;
+	xlmChar,
+	xlmInt,
+	xlmFloat,
+	xlmDouble,
+	xlmUnsigned,
+	xlmLong
+} xlmTypes_t;
 
-typedef unsigned mmatrix_t;
+typedef unsigned xlmmatrix_t;
 
-char minit(mmatrix_t *, unsigned, unsigned, mTypes_t);
-void mfree(int sz, ...);
-void mclear(int sz, ...);
+char xlminit(xlmmatrix_t *, unsigned m, unsigned n, xlmTypes_t, void *);
+void xlmfree(int sz, ...);
+void xlmclear(int sz, ...);
 
-char mgettype(mmatrix_t, mTypes_t *);
+char xlmgettype(xlmmatrix_t, xlmTypes_t *);
 
-char msetcoefficients(mmatrix_t, void *);
+char xlmsetcoefficients(xlmmatrix_t, void *);
 
-size_t msizeof_rows(mmatrix_t);
-size_t msizeof_cols(mmatrix_t);
-size_t msizeof_type(mTypes_t);
-size_t msizeof_matrix(mmatrix_t);
+size_t xlmsizeof_rows(xlmmatrix_t);
+size_t xlmsizeof_cols(xlmmatrix_t);
+size_t xlmsizeof_type(xlmTypes_t);
+size_t xlmsizeof_matrix(xlmmatrix_t);
 
-char mrows_fill(mmatrix_t, unsigned, void *);
-char mcols_fill(mmatrix_t, unsigned, void *);
+char xlmrows_fill(xlmmatrix_t, unsigned, void *);
+char xlmcols_fill(xlmmatrix_t, unsigned, void *);
 
 #endif /* matrix */

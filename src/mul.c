@@ -15,7 +15,7 @@
 // };
 
 int
-mul(mmatrix_t *a, mmatrix_t *b, mmatrix_t *c)
+xlmmul(xlmmatrix_t *a, xlmmatrix_t *b, xlmmatrix_t *c)
 {
 	return 1;
 	// struct helpers_t *helpers, *local_helpers;
